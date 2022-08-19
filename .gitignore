@@ -1,23 +1,37 @@
-# Compiled class file
-*.class
+import java.util.Scanner;
+import java.lang.*;
 
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+public class ExtremeMain
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        
+        // Create a Scanner object
+        
+        Extremes ex = new Extremes();
+        
+        // Create an Extremes object
+        
+        System.out.println("Guess the maximum Integer value: ");
+        // Ask the user to guess the maximum value of an Integer
+        int maxGuess = input.nextInt();
+        int maxdiff = ex.maxDiff(maxGuess);
+        System.out.println("You were off by " + (maxdiff));
+        
+        // Compute and display the difference
+        // between the max and the guess
+        
+        System.out.println("Guess the minimum Integer value: ");
+        int minGuess = input.nextInt();
+        int mindiff = ex.minDiff(minGuess);
+        System.out.println("You were off by "+ (mindiff));
+        // Ask the user to guess the minimum value of an Integer
+        
+        
+        // Compute and display the difference 
+        // between the min and the guess
+        
+        
+    }
+}
